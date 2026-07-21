@@ -141,7 +141,7 @@ def process_page(page, doc) -> bool:
 
 def main():
     pdf_dir = Path(__file__).parent
-    pdfs = sorted(f for f in pdf_dir.glob('Lecture*.pdf') if not f.stem.endswith('_cleaned'))
+    pdfs = sorted(f for f in pdf_dir.glob('*.pdf') if not f.stem.endswith('_cleaned'))
     if not pdfs:
         print("No PDF files found.")
         sys.exit(1)
